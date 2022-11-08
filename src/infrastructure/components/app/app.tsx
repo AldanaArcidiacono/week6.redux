@@ -1,16 +1,13 @@
-// import { TodoContextProvider } from '../../infrastructure/context/todo/provider';
-// import { Layout } from '../layout/layout';
-// import { AppRoutes } from '../routes/app.routes';
+import { Layout } from '../layout/layout';
+import { AppRoutes } from '../routes/app.routes';
 
-function App() {
+export function App() {
     return (
-        // <Layout>
-        //     <TodoContextProvider>
-        //         <AppRoutes></AppRoutes>
-        //     </TodoContextProvider>
-        // </Layout>
-        <div>App initial</div>
+        <>
+            <Layout>
+                <AppRoutes></AppRoutes>
+            </Layout>
+            <div>App inicial de React</div>
+        </>
     );
 }
-
-export default App;
