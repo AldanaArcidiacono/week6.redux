@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-const Home = lazy(() => import('../../../feature/home/page/home.page'));
+const Home = lazy(() => import('../../../feature/home/home/home.page'));
 const About = lazy(() => import('../../../feature/about/about.page'));
 
 export function AppRoutes() {
