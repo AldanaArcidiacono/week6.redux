@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { App } from './infrastructure/components/app/app';
+import { appStore } from './infrastructure/store/store';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -11,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <Router>
-            <App />
+            <Provider store={appStore}>
+                <App />
+            </Provider>
         </Router>
     </React.StrictMode>
 );

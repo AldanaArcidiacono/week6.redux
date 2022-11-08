@@ -5,7 +5,7 @@ import * as ac from './action.creator';
 const initialState: Array<Task> = [];
 
 // Se escribe como la forma anterior que usabamos (devuelven y reciben lo mismo)
-export const TaskReducer = createReducer(initialState, (builder) => {
+export const taskReducer = createReducer(initialState, (builder) => {
     // state se deja aunque no se use y por eso se usa el _
     builder.addCase(ac.loadActionCreator, (_state, action) => action.payload);
 
@@ -27,3 +27,4 @@ export const TaskReducer = createReducer(initialState, (builder) => {
     // Muy importante que no falte nunca. Siempre es asi el caso por defecto
     builder.addDefaultCase((state) => state);
 });
+// Para testear esto se hace exactamente igual que como lo haciamos antes
